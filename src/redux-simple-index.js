@@ -7,15 +7,12 @@ import './index.css'
 // ReactDOM.render(<App />, document.getElementById('root'));
 // registerServiceWorker();
 
+//redux的简单实现
 // import {createStore} from './store'
-import {createStore,applyMiddleware} from 'redux'
-// import {createStore} from './store'
-import {reducer} from './reducers'
+import { createStore, applyMiddleware } from 'redux'
 
-import {Counter} from './components/Counter'
-
-// import createLogger from 'redux-logger';
-// const logger= createLogger()
+import { reducer } from './reducers'
+import { Counter } from './components/Counter'
 
 const store = createStore(reducer)
 

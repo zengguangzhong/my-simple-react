@@ -5,7 +5,7 @@ export const createStore =(reducer,initial_state,applyMiddleware)=>{
     const getState =()=>state;
     const dispatch=(action)=>{ 
         // 中间件处理
-        state=reducer(state,action)  // 传入初始值
+        state=reducer(state,action)  // 传入state初始值
         listeners.forEach(l=>l())
     }
     const subscribe=(listener)=>{
@@ -22,10 +22,10 @@ export const createStore =(reducer,initial_state,applyMiddleware)=>{
     }
 }
 
-let inintState={},action={type:'add', payload:1}
-let reducer = (inintState,action)=>{}
-let store = createStore(reducer)
-store.getState()
+// let inintState={},action={type:'add', payload:1}
+// let reducer = (inintState,action)=>{}
+// let store = createStore(reducer)
+// store.getState()
 
-let render=()=>{}
-let unsubscibe = store.subscribe(render)
+// let render=()=>{}
+// let unsubscibe = store.subscribe(render)
